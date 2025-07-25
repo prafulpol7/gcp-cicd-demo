@@ -1,15 +1,11 @@
 steps:
-# Step 1: Deploy infrastructure
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['deployment-manager', 'deployments', 'create', 'my-infra-deployment', '--config=deployment-config.yaml']
-
-# Step 2: Confirm deployment
 - name: 'ubuntu'
   entrypoint: bash
   args: ['-c', 'echo Deployment successful!']
 
 timeout: 600s
-
 options:
   logging: CLOUD_LOGGING_ONLY
 

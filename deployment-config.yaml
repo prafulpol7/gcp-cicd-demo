@@ -1,4 +1,3 @@
-# deployment-config.yaml
 resources:
 - name: demo-vm
   type: compute.v1.instance
@@ -14,3 +13,4 @@ resources:
         sourceImage: projects/debian-cloud/global/images/family/debian-10
     networkInterfaces:
     - network: global/networks/default
+
